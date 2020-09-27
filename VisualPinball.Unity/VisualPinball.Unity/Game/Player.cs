@@ -78,7 +78,7 @@ namespace VisualPinball.Unity
 			var tableComponent = gameObject.GetComponent<TableAuthoring>();
 			var engineComponent = GetComponent<DefaultGameEngineAuthoring>();
 
-			Table = tableComponent.CreateTable();
+			Table = tableComponent.CreateTable(tableComponent.Data);
 			_ballManager = new BallManager(Table, TableToWorld);
 			_inputManager = new InputManager();
 
