@@ -29,10 +29,8 @@ namespace VisualPinball.Unity
 {
 	[ExecuteAlways]
 	[AddComponentMenu("Visual Pinball/Hit Target")]
-	public class HitTargetAuthoring : ItemAuthoring<HitTarget, HitTargetData>, IConvertGameObjectToEntity, IHittableAuthoring, ISwitchableAuthoring
+	public class HitTargetAuthoring : ItemMainAuthoring<HitTarget, HitTargetData>, IConvertGameObjectToEntity, IHittableAuthoring, ISwitchableAuthoring
 	{
-		protected override string[] Children => null;
-
 		protected override HitTarget InstantiateItem(HitTargetData data) => new HitTarget(data);
 
 		public IHittable Hittable => Item;

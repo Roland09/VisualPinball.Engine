@@ -60,7 +60,7 @@ namespace VisualPinball.Unity.Editor
 
 			// give each editable item a chance to update its fields
 			string undoName = "Rename Material";
-			foreach (var item in _table.GetComponentsInChildren<IEditableItemAuthoring>()) {
+			foreach (var item in _table.GetComponentsInChildren<IItemMeshAuthoring>()) {
 				RenameReflectedFields(undoName, item, item.MaterialRefs, oldName, newName);
 			}
 			Undo.RecordObject(_table, undoName);
@@ -74,7 +74,7 @@ namespace VisualPinball.Unity.Editor
 
 			// collect list of in use materials
 			List<string> inUseMaterials = new List<string>();
-			foreach (var item in _table.GetComponentsInChildren<IEditableItemAuthoring>()) {
+			foreach (var item in _table.GetComponentsInChildren<IItemMeshAuthoring>()) {
 				var matRefs = item.MaterialRefs;
 				if (matRefs == null) { continue; }
 				foreach (var matRef in matRefs) {
@@ -96,7 +96,7 @@ namespace VisualPinball.Unity.Editor
 
 		protected override void OnDataChanged(string undoName, MaterialListData data)
 		{
-			foreach (var item in _table.GetComponentsInChildren<IEditableItemAuthoring>()) {
+			foreach (var item in _table.GetComponentsInChildren<IItemMeshAuthoring>()) {
 				if (IsReferenced(item.MaterialRefs, item.ItemData, data.Material.Name)) {
 					item.MeshDirty = true;
 					Undo.RecordObject(item as Object, undoName);

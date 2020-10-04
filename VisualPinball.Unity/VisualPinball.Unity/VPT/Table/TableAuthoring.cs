@@ -53,7 +53,7 @@ using SurfaceData = VisualPinball.Engine.VPT.Surface.SurfaceData;
 namespace VisualPinball.Unity
 {
 	[AddComponentMenu("Visual Pinball/Table")]
-	public class TableAuthoring : ItemAuthoring<Table, TableData>
+	public class TableAuthoring : ItemMainAuthoring<Table, TableData>
 	{
 		public Table Table => Item;
 		public TableSerializedTextureContainer Textures => _sidecar?.textures;
@@ -61,8 +61,6 @@ namespace VisualPinball.Unity
 		public List<CollectionData> Collections => _sidecar?.collections;
 		public List<MappingConfigData> MappingConfigs => _sidecar?.mappingConfigs;
 		public Patcher.Patcher Patcher { get; internal set; }
-
-		protected override string[] Children => null;
 
 		[HideInInspector] [SerializeField] public string physicsEngineId;
 		[HideInInspector] [SerializeField] public string debugUiId;

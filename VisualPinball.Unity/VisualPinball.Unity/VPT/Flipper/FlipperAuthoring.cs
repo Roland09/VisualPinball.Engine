@@ -31,9 +31,9 @@ namespace VisualPinball.Unity
 	[ExecuteAlways]
 	[RequiresEntityConversion]
 	[AddComponentMenu("Visual Pinball/Flipper")]
-	public class FlipperAuthoring : ItemAuthoring<Flipper, FlipperData>, IHittableAuthoring, IConvertGameObjectToEntity
+	public class FlipperAuthoring : ItemMainAuthoring<Flipper, FlipperData>, IHittableAuthoring, IConvertGameObjectToEntity
 	{
-		protected override string[] Children => new []{ FlipperMeshGenerator.BaseName, FlipperMeshGenerator.RubberName };
+		//protected override string[] Children => new []{ FlipperMeshGenerator.BaseName, FlipperMeshGenerator.RubberName };
 
 		protected override Flipper InstantiateItem(FlipperData data) => new Flipper(data);
 
