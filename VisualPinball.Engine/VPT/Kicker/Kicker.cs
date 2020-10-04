@@ -23,7 +23,8 @@ namespace VisualPinball.Engine.VPT.Kicker
 {
 	public class Kicker : Item<KickerData>, IRenderable, IBallCreationPosition, IHittable
 	{
-		public override string ItemType => "Kicker";
+		public override string ItemName { get; } = "Kicker";
+		public override string ItemGroupName { get; } = "Kickers";
 
 		public KickerHit KickerHit => _hit;
 		public string[] UsedMaterials => new[] { Data.Material };
@@ -56,10 +57,21 @@ namespace VisualPinball.Engine.VPT.Kicker
 			_hit = new KickerHit(Data, radius, height, table, this); // height of kicker hit cylinder
 		}
 
+		#region IRenderable
+
+		Matrix3D IRenderable.TransformationMatrix(Origin origin) => Matrix3D.Identity;
+
+		public RenderObject GetRenderObject(Table.Table table, string id = null, Origin origin = Origin.Global, bool asRightHanded = true)
+		{
+			throw new System.NotImplementedException();
+		}
+
 		public RenderObjectGroup GetRenderObjects(Table.Table table, Origin origin = Origin.Global, bool asRightHanded = true)
 		{
 			return _meshGenerator.GetRenderObjects(table, origin, asRightHanded);
 		}
+
+		#endregion
 
 		public HitObject[] GetHitShapes()
 		{

@@ -24,7 +24,8 @@ namespace VisualPinball.Engine.VPT.Gate
 {
 	public class Gate : Item<GateData>, IRenderable, IHittable
 	{
-		public override string ItemType => "Gate";
+		public override string ItemName { get; } = "Gate";
+		public override string ItemGroupName { get; } = "Gates";
 
 		private readonly GateMeshGenerator _meshGenerator;
 		private readonly GateHitGenerator _hitGenerator;
@@ -59,10 +60,21 @@ namespace VisualPinball.Engine.VPT.Gate
 			_hitCircles = _hitGenerator.GenerateBracketHits(height, tangent, this);
 		}
 
+		#region IRenderable
+
+		Matrix3D IRenderable.TransformationMatrix(Origin origin) => Matrix3D.Identity;
+
+		public RenderObject GetRenderObject(Table.Table table, string id = null, Origin origin = Origin.Global, bool asRightHanded = true)
+		{
+			throw new System.NotImplementedException();
+		}
+
 		public RenderObjectGroup GetRenderObjects(Table.Table table, Origin origin = Origin.Global, bool asRightHanded = true)
 		{
 			return _meshGenerator.GetRenderObjects(table, origin, asRightHanded);
 		}
+
+		#endregion
 
 		public HitObject[] GetHitShapes()
 		{
