@@ -263,10 +263,9 @@ namespace VisualPinball.Unity.Editor
 		#region Helper methods
 		private void RefreshSwitchables()
 		{
-			_switchables.Clear();
+			if (_table != null) {
 
-			if (_table != null)
-			{
+				_switchables.Clear();
 				foreach (var item in _table.GetComponentsInChildren<ISwitchableAuthoring>())
 				{
 					_switchables.Add(item.Name.ToLower(), item);
