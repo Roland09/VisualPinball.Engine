@@ -30,7 +30,7 @@ using VisualPinball.Engine.VPT.Kicker;
 namespace VisualPinball.Unity
 {
 	[ExecuteAlways]
-	[AddComponentMenu("Visual Pinball/Kicker")]
+	[AddComponentMenu("Visual Pinball/Game Item/Kicker")]
 	public class KickerAuthoring : ItemMainAuthoring<Kicker, KickerData>, IConvertGameObjectToEntity, IHittableAuthoring, ISwitchableAuthoring
 	{
 		protected override Kicker InstantiateItem(KickerData data) => new Kicker(data);

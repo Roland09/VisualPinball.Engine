@@ -30,7 +30,7 @@ using VisualPinball.Engine.VPT.Trigger;
 namespace VisualPinball.Unity
 {
 	[ExecuteAlways]
-	[AddComponentMenu("Visual Pinball/Trigger")]
+	[AddComponentMenu("Visual Pinball/Game Item/Trigger")]
 	public class TriggerAuthoring : ItemMainAuthoring<Trigger, TriggerData>,
 		IHittableAuthoring, ISwitchableAuthoring, IDragPointsEditable, IConvertGameObjectToEntity
 	{

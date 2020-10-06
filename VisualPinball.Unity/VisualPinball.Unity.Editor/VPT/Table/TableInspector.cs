@@ -60,8 +60,6 @@ namespace VisualPinball.Unity.Editor
 					}
 				}
 			}
-
-			base.OnInspectorGUI();
 		}
 
 		private void DrawEngineSelector<T>(string engineName, ref string engineId, ref T[] instances, ref string[] names, ref int index) where T : IEngine
