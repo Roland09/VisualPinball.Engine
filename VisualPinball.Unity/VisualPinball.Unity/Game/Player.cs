@@ -95,7 +95,7 @@ namespace VisualPinball.Unity
 		private void Start()
 		{
 			// hook-up game switches
-			if (GameEngine is IGamelogicEngineWithSwitches engineWithSwitches) {
+			if (GameEngine is IGamelogicEngineWithSwitches engineWithSwitches && Table.MappingConfigs.ContainsKey("Switch")) {
 				var config = Table.MappingConfigs["Switch"];
 				var keyBindings = new Dictionary<string, List<string>>();
 				foreach (var mappingEntry in config.Data.MappingEntries) {
