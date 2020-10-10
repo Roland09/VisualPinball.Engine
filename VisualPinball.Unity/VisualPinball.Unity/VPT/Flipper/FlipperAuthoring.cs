@@ -20,6 +20,7 @@
 // ReSharper disable MemberCanBePrivate.Global
 #endregion
 
+using System;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -33,9 +34,9 @@ namespace VisualPinball.Unity
 	[AddComponentMenu("Visual Pinball/Game Item/Flipper")]
 	public class FlipperAuthoring : ItemMainAuthoring<Flipper, FlipperData>, IHittableAuthoring, IConvertGameObjectToEntity
 	{
-		//protected override string[] Children => new []{ FlipperMeshGenerator.BaseName, FlipperMeshGenerator.RubberName };
-
 		protected override Flipper InstantiateItem(FlipperData data) => new Flipper(data);
+
+		protected override Type MeshAuthoringType { get; } = typeof(ItemMeshAuthoring<Flipper, FlipperData, FlipperAuthoring>);
 
 		public IHittable Hittable => Item;
 

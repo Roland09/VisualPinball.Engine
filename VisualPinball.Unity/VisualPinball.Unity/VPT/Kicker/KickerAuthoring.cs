@@ -20,6 +20,7 @@
 // ReSharper disable MemberCanBePrivate.Global
 #endregion
 
+using System;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -34,6 +35,8 @@ namespace VisualPinball.Unity
 	public class KickerAuthoring : ItemMainAuthoring<Kicker, KickerData>, IConvertGameObjectToEntity, IHittableAuthoring, ISwitchableAuthoring
 	{
 		protected override Kicker InstantiateItem(KickerData data) => new Kicker(data);
+
+		protected override Type MeshAuthoringType { get; } = typeof(ItemMeshAuthoring<Kicker, KickerData, KickerAuthoring>);
 
 		public IHittable Hittable => Item;
 

@@ -20,6 +20,7 @@
 // ReSharper disable MemberCanBePrivate.Global
 #endregion
 
+using System;
 using Unity.Entities;
 using UnityEngine;
 using VisualPinball.Engine.Game;
@@ -32,6 +33,8 @@ namespace VisualPinball.Unity
 	public class HitTargetAuthoring : ItemMainAuthoring<HitTarget, HitTargetData>, IConvertGameObjectToEntity, IHittableAuthoring, ISwitchableAuthoring
 	{
 		protected override HitTarget InstantiateItem(HitTargetData data) => new HitTarget(data);
+
+		protected override Type MeshAuthoringType { get; } = typeof(ItemMeshAuthoring<HitTarget, HitTargetData, HitTargetAuthoring>);
 
 		public IHittable Hittable => Item;
 
