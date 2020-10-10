@@ -21,7 +21,10 @@
 #endregion
 
 using System;
+using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
+using VisualPinball.Engine.Common;
 using VisualPinball.Engine.Game;
 using VisualPinball.Engine.VPT.Spinner;
 
@@ -30,13 +33,29 @@ namespace VisualPinball.Unity
 	[ExecuteAlways]
 	[AddComponentMenu("Visual Pinball/Game Item/Spinner")]
 	public class SpinnerAuthoring : ItemMainAuthoring<Spinner, SpinnerData>,
-		IHittableAuthoring, ISwitchableAuthoring
+		IHittableAuthoring, ISwitchableAuthoring, IConvertGameObjectToEntity
 	{
 		protected override Spinner InstantiateItem(SpinnerData data) => new Spinner(data);
 
 		protected override Type MeshAuthoringType { get; } = typeof(ItemMeshAuthoring<Spinner, SpinnerData, SpinnerAuthoring>);
 
 		public IHittable Hittable => Item;
+
+		public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+		{
+			Convert(entity, dstManager);
+
+			dstManager.AddComponentData(entity, new SpinnerStaticData {
+				AngleMax = math.radians(Data.AngleMax),
+				AngleMin = math.radians(Data.AngleMin),
+				Damping = math.pow(Data.Damping, (float)PhysicsConstants.PhysFactor),
+				Elasticity = Data.Elasticity,
+				Height = Data.Height
+			});
+
+			// register
+			transform.GetComponentInParent<Player>().RegisterSpinner(Item, entity, gameObject);
+		}
 
 		private void OnDestroy()
 		{
