@@ -23,8 +23,8 @@ namespace VisualPinball.Engine.VPT.Flipper
 {
 	public class Flipper : Item<FlipperData>, IRenderable, IHittable
 	{
-		public override string ItemName { get; } = "Flasher";
-		public override string ItemGroupName { get; } = "Flashers";
+		public override string ItemName { get; } = "Flipper";
+		public override string ItemGroupName { get; } = "Flippers";
 
 		private readonly FlipperMeshGenerator _meshGenerator;
 		private FlipperHit _hit;
