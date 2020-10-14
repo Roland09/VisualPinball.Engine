@@ -27,10 +27,6 @@ namespace VisualPinball.Unity
 	[AddComponentMenu("Visual Pinball/Game Item/Plunger")]
 	public class PlungerAuthoring : ItemMainAuthoring<Plunger, PlungerData>, IConvertGameObjectToEntity, IHittableAuthoring
 	{
-		// protected override string[] Children => new [] {
-		// 	PlungerMeshGenerator.FlatName, PlungerMeshGenerator.RodName, PlungerMeshGenerator.SpringName
-		// };
-
 		protected override Plunger InstantiateItem(PlungerData data) => new Plunger(data);
 
 		protected override Type MeshAuthoringType { get; } = typeof(ItemMeshAuthoring<Plunger, PlungerData, PlungerAuthoring>);
