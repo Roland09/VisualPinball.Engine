@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installing VPE | VPE Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installing VPE | VPE Documentation ">
+    
+    <meta name="description" content="Visual Pinball for Unity - Documentation, Guides and Tutorials.">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+  
+    <script type="text/javascript">
+    var _paq = window._paq || [];
+    _paq.push(["setCookieDomain", "*.docs.visualpinball.org"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//count.vpdb.io/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="43.38" height="37.61" xml:space="preserve"><style>.st0{fill:#ddd}</style><path class="st0" d="M43.21 0H.17C.02 0-.04.11.03.24l21.52 37.28c.08.13.2.13.28 0L43.35.24c.08-.13.01-.24-.14-.24zm-3.62 2.41l-8.43 14.6a.54.54 0 01-.41.24h-4.83a.52.52 0 00-.41.24l-.98 1.7c-.08.13-.01.24.14.24h4.83c.15 0 .21.11.14.24l-1.79 3.1a.6.6 0 01-.42.23H22.6a.52.52 0 00-.41.24l-.98 1.7c-.08.13-.01.24.14.24h4.83c.15 0 .21.11.14.24l-4.48 7.76c-.08.13-.2.13-.28 0L3.8 2.41c-.08-.13-.02-.24.13-.24h35.51c.16 0 .22.11.15.24z"></path><path class="st0" d="M33.26 5.75H10.13c-.15 0-.21.11-.14.24l8.24 14.28c.08.13.2.13.28 0l3.67-6.36a.54.54 0 01.41-.24h6.09c.15 0 .34-.11.41-.24l4.3-7.44c.08-.13.02-.24-.13-.24zm-3.63 2.41l-1.79 3.1a.54.54 0 01-.41.24h-6.09a.52.52 0 00-.41.24l-2.42 4.18c-.08.13-.2.13-.28 0l-4.48-7.76c-.08-.13-.01-.24.14-.24h15.6c.15 0 .21.11.14.24z"></path></svg>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <a title="VPE is open source!" class="navbar-github pull-right" href="https://github.com/freezy/VisualPinball.Engine" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 33.5 33.1" width="33.5" height="33.1"><path d="M16.7.4a16.3 16.3 0 00-5.2 31.8c.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.6-1.9-1.7-2.4-1.7-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.7-3.2 1.7-4.4-.1-.4-.7-2 .2-4.3 0 0 1.4-.4 4.5 1.7a18.4 18.4 0 018.2 0c3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3v4.5c0 .4.3.9 1.1.8A16.3 16.3 0 0016.7.4z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="installing-vpe">Installing VPE</h1>
+
+<h2 id="unity">Unity</h2>
+<p>In order to start creating or tweaking tables with VPE, the first thing you'll need to install is <a href="https://unity3d.com/get-unity/download">Unity</a>. You will need a developer account, which is free.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>As long as you don't use VPE for a game that makes $100K or more in revenue or funding a year, the free <a href="https://store.unity.com/compare-plans">Personal</a> plan is sufficient for you.</p>
+</div>
+<p>Unity uses an application called <em>Unity Hub</em> to update itself and provide quick access to your projects. The install process is straight-forward and documented <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html">here</a> if you run into troubles.</p>
+<p>When installing Unity, use the latest <strong>2020.1</strong> version. You can leave all the other options unchecked.</p>
+<p>Once Unity is downloaded and installed, you'll need to create a new project. Unity has multiple render pipelines, and you'll be asked which render pipeline to use in your project:</p>
+<p><img src="unity-create-new-project.png" alt="New Unity Project"></p>
+<p>You'll have the choice between:</p>
+<ul>
+<li><strong>2D</strong> - For 2D games. VPE doesn't support this renderer.</li>
+<li><strong>3D</strong> - Unity's original built-in renderer.</li>
+<li><strong>High Definition RP</strong> - Unity's new <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@0.0.0/manual/index.html">HDRP</a>, used for high-end platforms.</li>
+<li><strong>Universal Render Pipeline</strong> - Unity's <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@8.2/manual/index.html">URP</a> is aimed at mobile and low-end platforms.</li>
+</ul>
+<p>We recommend using HDRP. It's not as mature as the built-in renderer, but it's able to achieve better visuals, and it's what Unity will be focusing on in the future.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you're just creating a throw-away project for testing out gameplay, the built-in renderer is more tested and faster to set up. We also support the URP, but it's not as well tested as the other two pipelines.</p>
+</div>
+<p>Next, enter a project name and a location for your project. We recommend putting the render pipeline into the name, because in the future you might test out other pipelines and thus need to create additional projects.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We recommend creating a <code>VPE</code> folder in your user directory (which is called <code>%userprofile%</code>), to contain all the VPE-related files. In this example that would be <code>%userprofile%\VPE\Test Table - HDRP</code>, which usually resolves to <code>C:\Users\{username}\VPE\Test Table - HDRP</code>.</p>
+<p>You're of course free to set this up however you want, but that's what we'll be referring to in the rest of the documentation.</p>
+</div>
+<p>Clicking <em>Create</em> launches the Unity editor, pulls in all the dependencies for the new project, and compiles them. This can take a minute or two.</p>
+<h3 id="hdrp-setup">HDRP Setup</h3>
+<p>If you create an HDRP project, Unity provides you with a sample scene:</p>
+<p><img src="unity-hdrp-default-scene.png" alt="HDRP Sample Scene"></p>
+<p>It's best to start by removing the unneeded objects. In the hierarchy, select:</p>
+<p><img src="unity-hdrp-to-delete.png" alt="Sky and Fog Volume, Light Probe Group, Example Assets"></p>
+<p>and press <code>delete</code>.</p>
+<p>Similarly, to clean up the project, get rid of the extra assets in the project view:</p>
+<p><img src="unity-hdrp-to-delete-assets.png" alt="ExampleAssets, TutorialInfo"></p>
+<h2 id="vpe-source-code">VPE Source Code</h2>
+<p>Now you have your project and scene set up, let's bring VPE into the project. Go to the GitHub page and <a href="https://github.com/freezy/VisualPinball.Engine">download the source code</a>. You can do that by clicking on the green <em>Code</em> button, and choosing <em>Downlaod ZIP</em>.</p>
+<p>As mentioned above, we recommend extracting this into the <code>%userprofile%\VPE\VisualPinball.Engine</code> folder:</p>
+<p><img src="explorer-vpe-root.png" alt="File Structure"></p>
+<p>In Unity, go to <em>Window -&gt; Package Manager</em>. Click on the &quot;plus&quot; icon on the top left corner of the window, and choose <em>Add package from disk</em>. Choose <code>package.json</code> in the root folder of the extracted VPE source code.</p>
+<p><img src="unity-package-manager.png" alt="New Unity Project"></p>
+<p>This will take a moment as Unity downloads and compiles all of VPE's dependencies. If during this time, you see the following warning:</p>
+<p><img src="unity-input-system-warning.png" alt="Unity Input System Warning"></p>
+<p>Click <em>Yes</em>. When complete, you should now have a <em>Visual Pinball</em> menu in the editor.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/freezy/VisualPinball.Engine/blob/master/VisualPinball.Unity/Documentation~/creators-guide/setup/installing-vpe.md/#L1" class="contribution-link btn btn-default">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2020 VPE Team
+            
+          </span></div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

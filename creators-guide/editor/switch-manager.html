@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Switch Manager | VPE Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Switch Manager | VPE Documentation ">
+    
+    <meta name="description" content="Visual Pinball for Unity - Documentation, Guides and Tutorials.">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+  
+    <script type="text/javascript">
+    var _paq = window._paq || [];
+    _paq.push(["setCookieDomain", "*.docs.visualpinball.org"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//count.vpdb.io/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="43.38" height="37.61" xml:space="preserve"><style>.st0{fill:#ddd}</style><path class="st0" d="M43.21 0H.17C.02 0-.04.11.03.24l21.52 37.28c.08.13.2.13.28 0L43.35.24c.08-.13.01-.24-.14-.24zm-3.62 2.41l-8.43 14.6a.54.54 0 01-.41.24h-4.83a.52.52 0 00-.41.24l-.98 1.7c-.08.13-.01.24.14.24h4.83c.15 0 .21.11.14.24l-1.79 3.1a.6.6 0 01-.42.23H22.6a.52.52 0 00-.41.24l-.98 1.7c-.08.13-.01.24.14.24h4.83c.15 0 .21.11.14.24l-4.48 7.76c-.08.13-.2.13-.28 0L3.8 2.41c-.08-.13-.02-.24.13-.24h35.51c.16 0 .22.11.15.24z"></path><path class="st0" d="M33.26 5.75H10.13c-.15 0-.21.11-.14.24l8.24 14.28c.08.13.2.13.28 0l3.67-6.36a.54.54 0 01.41-.24h6.09c.15 0 .34-.11.41-.24l4.3-7.44c.08-.13.02-.24-.13-.24zm-3.63 2.41l-1.79 3.1a.54.54 0 01-.41.24h-6.09a.52.52 0 00-.41.24l-2.42 4.18c-.08.13-.2.13-.28 0l-4.48-7.76c-.08-.13-.01-.24.14-.24h15.6c.15 0 .21.11.14.24z"></path></svg>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <a title="VPE is open source!" class="navbar-github pull-right" href="https://github.com/freezy/VisualPinball.Engine" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 33.5 33.1" width="33.5" height="33.1"><path d="M16.7.4a16.3 16.3 0 00-5.2 31.8c.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.6-1.9-1.7-2.4-1.7-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.7-3.2 1.7-4.4-.1-.4-.7-2 .2-4.3 0 0 1.4-.4 4.5 1.7a18.4 18.4 0 018.2 0c3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3v4.5c0 .4.3.9 1.1.8A16.3 16.3 0 0016.7.4z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="switch-manager">Switch Manager</h1>
+
+<p>During gameplay, the <a href="../manual/gamelogic-engine.html">gamelogic engine</a> needs to know what is happening on the playfield. For that reason, real pinball tables have switches all over the playfield that signal when a ball rolls over a certain position. These switches are also built into targets, bumpers, kickers, and some other items.</p>
+<p>Wiring these switches up to the gamelogic engine per code can be a tedious process. That's why VPE provides a graphical interface where you can do it easily. It even can guess which switch maps to which game item, if you've named them accordingly.</p>
+<p>You can open the switch manager under <em>Visual Pinball -&gt; Switch Manager</em>.</p>
+<p><img src="switch-manager.png" alt="Switch Manager"></p>
+<h2 id="setup">Setup</h2>
+<p>Imagine every row as a wire connecting the physical switch to the gamelogic engine. The relation between the two is <em>0..n -&gt; 0..n</em>, meaning you can link multiple switches to multiple entries.</p>
+<h3 id="ids">IDs</h3>
+<p>The first column <strong>ID</strong> shows the switch names that the gamelogic engine expects to be wired up.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>As we cannot be 100% sure that the gamelogic engine has accurate data about the switch names, you can also add switch IDs yourself, but that should be the exception.</p>
+</div>
+<h3 id="description">Description</h3>
+<p>The <strong>Description</strong> column is an optional free text field. If you're setting up a re-creation, that's where you typically put what's in the game manual. It's purely for your own benefit  and you can keep this empty if you want.</p>
+<h3 id="source">Source</h3>
+<p>The <strong>Source</strong> column defines where the element in the next column is located. There are three options:</p>
+<ul>
+<li><em>Playfield</em> lets you choose a game item in the playfield</li>
+<li><em>Input System</em> lets you choose an input action from a pre-defined list, i.e. cabinet switches</li>
+<li><em>Constant</em> sets the switch at the beginning of the game to the given value.</li>
+</ul>
+<h3 id="element">Element</h3>
+<p>The <strong>Element</strong> column is where you choose which element triggers the switch.</p>
+<p>For <strong>Playfield</strong>, you can choose a game item that triggers switch events. Currently, VPE only emits switch events for items that would do the same in real life, i.e. bumpers, gates, targets, kickers, spinners and triggers.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We realize that you might want to use other game items like ramps and walls to emit switch events as well, and we will address this at some point, but for now we're keeping it simple.</p>
+</div>
+<p>If <strong>Input System</strong> is selected, you choose which input action to use. We call it &quot;input action&quot;, because it's not an actual key binding. While actions have default key bindings, the final bindings will be defined in the host application. So what VPE is dealing with in terms of keyboard input is what we call <em>input actions</em>.</p>
+<p>Finally, if <strong>Constant</strong> is selected, you choose the value that will be permanently set at the beginning of the game.</p>
+<h3 id="type">Type</h3>
+<p>There are two modes a switch can emit its events:</p>
+<ul>
+<li><strong>On/Off</strong> has two distinct events, one for closing, and one for opening the switch. For example, triggers close when the ball rolls over it, and open again when the ball leaves.</li>
+<li><strong>Pulse</strong> only receives one event from the element, and automatically opens after a short period of time.</li>
+</ul>
+<h3 id="off">Off</h3>
+<p>This column only applies to pulse switches, and defines the period of time the switch will stay closed. After that period expires, the switch will open again.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We use the terms &quot;open&quot; and &quot;close&quot; for switches, since that's what they do in real life. In electrical terms these are called &quot;NC&quot; (normally closed) and &quot;NO&quot; (normally open). In summary, these terms are synonyms:</p>
+<table>
+<thead>
+<tr>
+<th>Technical</th>
+<th>Status</th>
+<th>Common</th>
+<th>In code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NO</td>
+<td>Open</td>
+<td>Off</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>NC</td>
+<td>Closed</td>
+<td>On</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/freezy/VisualPinball.Engine/blob/master/VisualPinball.Unity/Documentation~/creators-guide/editor/switch-manager.md/#L1" class="contribution-link btn btn-default">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2020 VPE Team
+            
+          </span></div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
